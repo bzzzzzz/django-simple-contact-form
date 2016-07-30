@@ -1,14 +1,24 @@
 # coding=utf-8
+import os
+
 from setuptools import setup
 
 setup(
     name='django-simple-contact-form',
-    version='0.1.0',
+    version='0.1.1',
     zip_safe=False,
     description='Generic contact-form application for Django',
     author='Evgeny Barbashov',
     author_email='evgenybarbashov@yandex.ru',
+    url='https://github.com/bzzzzzz/django-simple-contact-form',
     packages=['contact_form', 'contact_form.tests'],
+    long_description=open(os.path.join(os.path.dirname(__file__),
+                          'README.rst')).read(),
+    package_data={
+        'contact_form': [
+            'tests/templates/*/*.*',
+        ]
+    },
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
