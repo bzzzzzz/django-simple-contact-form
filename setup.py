@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
     name='django-simple-contact-form',
-    version='0.1.1',
+    version='0.1.2',
     zip_safe=False,
     description='Generic contact-form application for Django',
     author='Evgeny Barbashov',

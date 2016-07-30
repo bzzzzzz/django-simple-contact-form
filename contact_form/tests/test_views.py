@@ -1,14 +1,18 @@
 # coding=utf-8
 from __future__ import absolute_import, unicode_literals
 
+import os
+
 from django.conf import settings
 from django.core import mail
 from django.core.urlresolvers import reverse
-from django.test import RequestFactory, TestCase
+from django.test import RequestFactory, TestCase, override_settings
 
 from ..forms import ContactForm
 
 
+@override_settings(
+    TEMPLATE_DIRS=(os.path.join(os.path.dirname(__file__), 'templates'),))
 class ContactFormViewTests(TestCase):
 
     def test_get(self):
