@@ -17,6 +17,7 @@ setup(
     package_data={
         'contact_form': [
             'tests/templates/*/*.*',
+            'locale/*/LC_MESSAGES/*.po',
         ]
     },
     classifiers=[
