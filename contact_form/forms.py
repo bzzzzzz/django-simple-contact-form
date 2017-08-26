@@ -80,9 +80,7 @@ class ContactForm(forms.Form):
             site = Site.objects.get_current()
         else:
             site = RequestSite(self.request)
-        return RequestContext(self.request,
-                              dict(self.cleaned_data,
-                                   site=site))
+        return dict(self.cleaned_data, site=site)
 
     def get_message_dict(self):
         """Generate the various parts of the message and return them in a
